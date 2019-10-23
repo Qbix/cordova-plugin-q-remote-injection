@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="cordova-plugin-q-remote-injection"
+        version="0.1.0">
+
+  <name>Q Remote Injection</name>
+
+  <engines>
+      <engine name="cordova" version=">=3.4.0"/>
+      <engine name="cordova-ios" version=">=4.0.0-dev" />
+      <engine name="apple-ios" version=">=9.0" />
+  </engines>
+
+  <!-- <asset src="www/q_remote_injection.js" target="js/q_remote_injection.js"/> -->
+
+  <js-module src="www/q_remote_injection.js" name="Q.Cordova.RemoteInjection">
+    <clobbers target="Q.Cordova.RemoteInjection" />
+  </js-module>
+
+  <dependency id="cordova-plugin-wkwebview-engine" url="https://github.com/apache/cordova-plugin-wkwebview-engine.git"/>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Hello">
+        <param name="android-package" value="com.example.plugin.Hello"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
+  </platform>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="QRemoteInjection">
+        <param name="ios-package" value="QRemoteInjection" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/QRemoteInjection.h" />
+    <source-file src="src/ios/QRemoteInjection.m" />
+  </platform>
+</plugin>

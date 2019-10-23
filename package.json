@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-q-remote-injection",
+  "version": "0.1.0",
+  "description": "Cordova plugin for remote injection in Q framework",
+  "cordova": {
+    "id": "cordova-plugin-q-remote-injection",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qbix/cordova-plugin-q-remote-injection.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "Q",
+    "inject"
+  ],
+  "author": "Igor Martsekha",
+  "license": "Apache-2",
+  "bugs": {
+    "url": "https://github.com/Qbix/cordova-plugin-q-remote-injection/issues"
+  },
+  "homepage": "https://github.com/Qbix/cordova-plugin-q-remote-injection#readme"
+}
