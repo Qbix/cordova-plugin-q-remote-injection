@@ -31,12 +31,16 @@
   </platform>
 
   <platform name="ios">
+    <!-- <js-module src="www/ios/q-ios-wkwebview-exec.js" name="q-ios-wkwebview-exec">
+      <clobbers target="cordova.exec" />
+    </js-module> -->
     <config-file target="config.xml" parent="/*">
       <feature name="QRemoteInjection">
         <param name="ios-package" value="QRemoteInjection" />
       </feature>
+      <preference name="CordovaWebViewEngine" value="QWKWebViewEngine" />
+      <preference name="CRIEnableRemoteInjection" value="false" />
     </config-file>
-
     <header-file src="src/ios/QRemoteInjection.h" />
     <source-file src="src/ios/QRemoteInjection.m" />
   </platform>
