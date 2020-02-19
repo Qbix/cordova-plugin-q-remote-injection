@@ -38,7 +38,7 @@
       <feature name="QRemoteInjection">
         <param name="ios-package" value="QRemoteInjection" />
       </feature>
-      <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+      <preference name="CordovaWebViewEngine" value="QWKWebViewEngine" />
       <preference name="CRIEnableRemoteInjection" value="false" />
     </config-file>
     <header-file src="src/ios/QRemoteInjection.h" />
